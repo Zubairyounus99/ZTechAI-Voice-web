@@ -19,8 +19,13 @@ export const Header = () => {
           <a href="#faq" className="text-sm font-medium hover:underline underline-offset-4">
             FAQ
           </a>
+          <a href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
+            Contact
+          </a>
         </nav>
-        <Button>Get Started</Button>
+        <a href="#contact">
+          <Button>Get Started</Button>
+        </a>
       </div>
     </header>
   );

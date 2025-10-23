@@ -13,7 +13,9 @@ export const Cta = () => {
           Schedule a free, no-obligation consultation with our AI experts to discover how we can help you achieve your goals.
         </p>
         <div className="mt-8">
-          <Button size="lg">Book a Free Consultation</Button>
+          <a href="#contact">
+            <Button size="lg">Book a Free Consultation</Button>
+          </a>
         </div>
       </div>
     </section>

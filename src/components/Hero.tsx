@@ -14,7 +14,9 @@ export const Hero = () => {
             Leverage our expertise to build and deploy custom AI agents that automate tasks, streamline operations, and drive growth for your business.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button size="lg">Get Started</Button>
+            <a href="#contact">
+              <Button size="lg">Get Started</Button>
+            </a>
           </div>
         </div>
       </div>
