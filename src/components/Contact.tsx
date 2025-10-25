@@ -45,12 +45,14 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Contact Us</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            Let's Build Something <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Amazing Together</span>
+          </h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
-            Have a question or want to discuss a project? Fill out the form below.
+            Get In Touch. Fill out the form to start the conversation.
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
@@ -63,7 +65,7 @@ export const Contact = () => {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your Name" {...field} />
+                      <Input placeholder="Your Name" {...field} className="bg-slate-900 border-slate-800" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -76,7 +78,7 @@ export const Contact = () => {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
+                      <Input placeholder="your.email@example.com" {...field} className="bg-slate-900 border-slate-800" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -91,7 +93,7 @@ export const Contact = () => {
                     <FormControl>
                       <Textarea
                         placeholder="Tell us how we can help"
-                        className="resize-none"
+                        className="resize-none bg-slate-900 border-slate-800"
                         {...field}
                       />
                     </FormControl>
@@ -99,7 +101,7 @@ export const Contact = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold">Send Message</Button>
             </form>
           </Form>
         </div>

@@ -9,20 +9,36 @@ import {
 
 const faqs = [
   {
-    question: "What kind of businesses can benefit from your AI solutions?",
-    answer: "Virtually any business can benefit from AI. We work with clients across various industries, including e-commerce, real estate, healthcare, finance, and more. If you have repetitive tasks, large amounts of data, or want to improve customer engagement, AI can help.",
+    question: "How long does it take to get my AI Agent live?",
+    answer: "The deployment time varies based on complexity, but we aim for a rapid setup. A standard AI agent can be live within 1-2 weeks, including integration and testing.",
   },
   {
-    question: "How long does it take to build and deploy an AI solution?",
-    answer: "The timeline varies depending on the complexity of the project. A simple chatbot might take a few weeks, while a complex custom AI model could take several months. We provide a detailed project timeline after our initial discovery call.",
+    question: "What types of businesses use ZTECH AI?",
+    answer: "We serve a wide range of industries, including e-commerce, real estate, healthcare, and customer service centers. Any business looking to automate communication and reduce costs can benefit.",
   },
   {
-    question: "What is the cost of your services?",
-    answer: "Our pricing is project-based and depends on the scope and complexity of the work. We offer flexible pricing models to suit different budgets. Contact us for a custom quote.",
+    question: "Can it integrate with my booking or management software?",
+    answer: "Yes, our AI agents are designed for seamless integration with most popular CRM, booking, and management software. We provide support for custom integrations as well.",
   },
   {
-    question: "Do I need to have technical expertise to work with you?",
-    answer: "Not at all. We handle all the technical aspects. Our goal is to make AI accessible to everyone. We'll explain everything in simple terms and work closely with you to ensure the solution meets your business needs.",
+    question: "What happens if the AI can't answer a question?",
+    answer: "Our AI agents are programmed with smart escalation protocols. If they encounter a question they cannot answer, they can seamlessly transfer the conversation to a human agent.",
+  },
+  {
+    question: "Can I customize the voice, language, or tone?",
+    answer: "Absolutely. We offer a variety of customization options for voice, language, accent, and tone to ensure the AI agent aligns perfectly with your brand identity.",
+  },
+  {
+    question: "Do I need technical skills to use it?",
+    answer: "Not at all. We handle the entire setup and integration process. You'll get a fully functional AI agent without needing any technical expertise on your end.",
+  },
+  {
+    question: "What's included in the free demo?",
+    answer: "The free demo includes a consultation to understand your needs, a showcase of the AI agent's capabilities, and a customized proposal outlining the solution and pricing.",
+  },
+  {
+    question: "Is my data and customer information safe?",
+    answer: "Yes, we prioritize security. All data is encrypted, and we adhere to strict data protection and privacy regulations to ensure your and your customers' information is secure.",
   },
 ];
 
@@ -33,10 +49,18 @@ export const Faq = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Frequently Asked Questions</h2>
         </div>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto grid gap-x-8 gap-y-4 md:grid-cols-2">
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index + 1}`} key={index}>
+            {faqs.slice(0, 4).map((faq, index) => (
+              <AccordionItem value={`item-${index + 1}`} key={index} className="border-slate-800">
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.slice(4).map((faq, index) => (
+              <AccordionItem value={`item-${index + 5}`} key={index} className="border-slate-800">
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
