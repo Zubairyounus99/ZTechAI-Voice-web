@@ -1,44 +1,38 @@
 "use client";
 
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { MessageCircle, Phone, Zap, Check } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { PhoneCall, Languages, Zap, CalendarClock, Users, BrainCircuit } from "lucide-react";
 
-const features = [
+const voiceFeatures = [
   {
-    icon: <MessageCircle className="h-8 w-8 text-cyan-400" />,
-    title: "AI Chatbot",
-    description: "Intelligent conversational AI that handles customer inquiries 24/7 with human-like interactions.",
-    points: [
-      "24/7 Customer Support",
-      "Natural Language Processing",
-      "Multi-language Support",
-      "Smart Escalation",
-    ],
-    benefit: "Reduces Support Load by 70%",
+    icon: <PhoneCall className="h-8 w-8 text-cyan-400" />,
+    title: "Inbound & Outbound Calling",
+    description: "Our AI handles both incoming customer queries and proactive outbound calls for sales and support.",
   },
   {
-    icon: <Phone className="h-8 w-8 text-purple-400" />,
-    title: "AI Voice Calling Agent",
-    description: "Advanced voice AI that handles outbound calls and lead qualification with natural conversations.",
-    points: [
-      "Outbound Call Automation",
-      "Lead Qualification",
-      "Appointment Scheduling",
-      "Natural Voice Synthesis",
-    ],
-    benefit: "Handles 1000+ Calls Daily",
+    icon: <Languages className="h-8 w-8 text-purple-400" />,
+    title: "Multi-language Support",
+    description: "Engage with a global audience. Our agents can communicate fluently in multiple languages and accents.",
   },
   {
     icon: <Zap className="h-8 w-8 text-green-400" />,
-    title: "AI Automation",
-    description: "Comprehensive workflow automation that streamlines processes and eliminates repetitive tasks.",
-    points: [
-      "Workflow Automation",
-      "Data Processing",
-      "Email Marketing",
-      "Performance Analytics",
-    ],
-    benefit: "Saves 40+ Hours Weekly",
+    title: "24/7 Availability",
+    description: "Provide round-the-clock support without the cost of a 24/7 human team. Never miss a customer call again.",
+  },
+  {
+    icon: <CalendarClock className="h-8 w-8 text-yellow-400" />,
+    title: "Appointment Scheduling",
+    description: "Automate your booking process. The AI can schedule, reschedule, and send reminders for appointments.",
+  },
+  {
+    icon: <Users className="h-8 w-8 text-red-400" />,
+    title: "Lead Qualification",
+    description: "Automatically qualify leads by asking targeted questions, ensuring your sales team talks to the hottest prospects.",
+  },
+  {
+    icon: <BrainCircuit className="h-8 w-8 text-blue-400" />,
+    title: "Human-like Conversation",
+    description: "Powered by advanced NLP, our agents provide natural, empathetic, and effective conversations.",
   },
 ];
 
@@ -47,34 +41,19 @@ export const Features = () => {
     <section id="features" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What We Build for Your Business</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">The Future of Customer Communication</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
-            Discover our AI-powered solutions designed to transform operations
+            Our AI Voice Agents are packed with features to automate and elevate your business.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-slate-900/50 border-slate-800 flex flex-col">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {voiceFeatures.map((feature, index) => (
+            <Card key={index} className="bg-slate-900/50 border-slate-800">
               <CardHeader>
                 {feature.icon}
-                <CardTitle className="mt-4 text-2xl">{feature.title}</CardTitle>
+                <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="mt-2">{feature.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-2">
-                  {feature.points.map((point, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <div className="p-6 pt-0 mt-auto">
-                <div className="text-center p-3 rounded-lg bg-slate-800 text-white font-semibold">
-                  {feature.benefit}
-                </div>
-              </div>
             </Card>
           ))}
         </div>

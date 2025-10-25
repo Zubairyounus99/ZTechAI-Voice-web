@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 export const Header = () => {
   return (
@@ -19,13 +20,13 @@ export const Header = () => {
           <a href="#faq" className="text-sm font-medium hover:text-primary transition-colors">
             FAQ
           </a>
-          <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-            Contact
-          </a>
         </nav>
-        <a href="#contact">
-          <Button className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white">Get Quote</Button>
-        </a>
+        <div className="flex items-center gap-4">
+          <a href="#schedule">
+            <Button className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white">Get Quote</Button>
+          </a>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

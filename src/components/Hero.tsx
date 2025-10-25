@@ -14,7 +14,7 @@ export const Hero = () => {
             Every day with traditional call centers costs you money. Switch to AI agents and cut costs by 70% instantly.
           </p>
           <div className="mt-8 flex justify-center">
-            <a href="#contact">
+            <a href="#schedule">
               <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold">
                 Book Your Free Strategy Call
               </Button>
