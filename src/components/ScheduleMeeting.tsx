@@ -14,7 +14,7 @@ export const ScheduleMeeting = () => {
     let script = document.querySelector(`script[src="${calScript}"]`) as HTMLScriptElement;
 
     const initCal = () => {
-      if (window.Cal) {
+      if (typeof window.Cal === "function") {
         window.Cal("init", "30min", { origin: "https://app.cal.com" });
         window.Cal.ns["30min"]("inline", {
           elementOrSelector: "#my-cal-inline-30min",
