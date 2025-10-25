@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 
 createRoot(document.getElementById("root")!).render(
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+  <ThemeProvider attribute="class" defaultTheme="dark" storageKey="vite-ui-theme">
     <App />
   </ThemeProvider>
 );
